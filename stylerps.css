@@ -8,6 +8,8 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     -size: cover;
+    width: auto;
+    height: auto;
 }
 .btns{
     display: flex;
