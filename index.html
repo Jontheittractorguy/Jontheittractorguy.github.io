@@ -1,40 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="stylerps.css" rel="stylesheet" type="text/css"/>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./RPS.js" defer>
-      
-    </script>
-</head>
-<body>
-    <div class="btns">
-        <h1 id="h1" >Welcome to the Pit</h1>
-        <div class="header">
-            <div class="startbtn">
-                <input type="button" id="ready" value='Attempt the impossible?'>
-            </div>
-        </div>
-    </div>
-    <div id="marquee">
-        <div class="sign">
-            <h2 id="display">Can you defeat the <em>Mighty</em> Demon of R/P/S???</h2>
-        </div>
-        <div class="results">
-            <p id="player">Player score: 0</p>
-            <div id="buttons">
-                <button class="rock">Rock</button>
-                <button class="paper">Paper</button>
-                <button class="scissors">Scissors</button>
-            </div>
-            <p id="comp">Demon score: 0</p>
-        </div>
-    </div>
-    <div class="reset">
-        <input type="hidden" id="reset" onclick="" class="invisible" value="Care to Fight again?">
-    </div>
-</body>
-</html>
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('./images/fire.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.btns{
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("./images/rock-paper-scissors.jpg");
+    background-position: center;
+    height: 350px;
+    margin: 0;
+}
+
+h1{
+    font-size: 100px;
+    margin: 20px;
+    font-family: “Open Sans”, sans-serif;
+    color: #3f0a0a;
+    text-shadow: 0px -2px 4px rgba(255, 255, 255, 0.753), 0px -2px 10px #ff3, 0px -10px 20px         #F90, 0px -20px 40px rgb(150, 6, 6);
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+}
+
+.startbtn{
+    display: flex;
+    width: max-content;
+}
+
+#ready{
+    visibility: visible;
+    width:max-content;
+    border-radius: 8px;
+    padding: 5px;
+    font-size: medium;
+    color: white;
+    background-color: #3f0a0a;
+    box-shadow: 0px -2px 4px rgba(255, 255, 255, 0.753), 0px -2px 10px #ff3, 0px -10px 20px         #F90, 0px -20px 40px rgb(150, 6, 6);;  
+}
+
+#buttons{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    visibility: hidden;
+    
+}
+
+#buttons>button{
+    width: 120px;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 900;
+    font-size: 25px;
+    text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black;
+}
+
+.rock{
+    background-image: url("./images/rock.jpeg");
+}
+
+.paper{
+    background-image: url('./images/paper.jpg');
+    background-size: 200px;
+}
+
+.scissors{
+    background-image: url('./images/scissors.jpeg');
+    background-size: contain;
+}
+
+#marquee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./images/playing.jpg");
+    width: 1280px;
+    height: 720px;
+    color: white;
+}
+
+.sign{
+    font-size: 30px;
+    height: fit-content;
+    margin-bottom: 100px;
+}
+
+#display{
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.results{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.results>p{
+    margin:100px;
+    font-size: xx-large;
+    text-shadow: 0 0 5px black, 0 0 5px black, 0 0 5px black, 0 0 5px black;
+}
+
+#player{
+    color: #ffe792;
+    width: max-content;
+}
+
+#comp{
+    color: #ff3131;
+}
+
+#reset{
+    font-size: 30px;
+    color: white;
+    font-weight: bolder;
+    padding: 15px;
+    border-radius: 8px;
+    background-image: url('./images/devilbckgrnd.jpg');
+}
