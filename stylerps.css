@@ -17,6 +17,7 @@ body{
 }
 
 .btns{
+    flex:1;
     display: flex;
     align-self: stretch;
     flex-direction: column;
@@ -25,6 +26,7 @@ body{
     background-image: url("./images/rock-paper-scissors.jpg");
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
     height: 10%;
     margin: 0;
 }
